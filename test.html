@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Display Selected HTML Table TR Values In Input Text</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            table tr:not(:first-child){
+                cursor: pointer;transition: all .25s ease-in-out;
+            }
+            table tr:not(:first-child):hover{background-color: #ddd;}
+        </style>
+        <link rel="stylesheet" type="text/css"  href="main.css" />
+        
+    </head>
+    <body>
+            <div id="header">
+                  <p>CPS842: PROJECT MOVIE RECOMMENDER</p>
+                </div>
+
+
+        <div id="box-1">
+
+
+            <div id="form">
+        Movie:<input type="text" name="m1" id="m1">
+        Rating:<input type="text" name="r1" id="r1"><br><br>
+
+        Movie:<input type="text" name="m2" id="m2">
+        Rating:<input type="text" name="r2" id="r2"><br><br>
+
+        Movie:<input type="text" name="m3" id="m3">
+        Rating:<input type="text" name="r3" id="r3"><br><br>
+
+
+        Movie:<input type="text" name="m4" id="m4">
+        Rating:<input type="text" name="r4" id="r4"><br><br>
+
+        Movie:<input type="text" name="m5" id="m5">
+        Rating:<input type="text" name="r5" id="r5"><br><br>
+
+
+
+
+        <script language="javascript" type="text/javascript">
+            function func1()
+            {   
+                var m1 = document.getElementById("m1").value;
+                var r1 = document.getElementById("r1").value;
+
+                var m2 = document.getElementById("m2").value;
+                var r2 = document.getElementById("r2").value;
+
+                var m3 = document.getElementById("m3").value;
+                var r3 = document.getElementById("r3").value;
+
+                var m4 = document.getElementById("m4").value;
+                var r4 = document.getElementById("r4").value;
+
+                var m5 = document.getElementById("m5").value;
+                var r5 = document.getElementById("r5").value;
+
+                document.getElementById('outputM1').innerHTML = m1;
+                document.getElementById('outputR1').innerHTML = r1;
+
+                document.getElementById('outputM2').innerHTML = m2;
+                document.getElementById('outputR2').innerHTML = r2;
+
+                document.getElementById('outputM3').innerHTML = m3;
+                document.getElementById('outputR3').innerHTML = r3;
+
+                document.getElementById('outputM4').innerHTML = m4;
+                document.getElementById('outputR4').innerHTML = r4;
+
+                document.getElementById('outputM5').innerHTML = m5;
+                document.getElementById('outputR5').innerHTML = r5;
+            
+            }
+            </script>
+
+        <button onclick="func1()">Add Movies</button>
+        <br><br>
+        <table id="table" border="1" align="center" >
+            <tr>
+                <th><p id="outputM">MOVIES</p></th>
+                <th><p id="outputR">RATINGS</p></th>
+            </tr>
+            
+            <tr>
+                    <th><p id="outputM1"></p></th>
+                    <th><p id="outputR1"></p></th>
+            </tr>
+            
+            <tr>
+                    <th><p id="outputM2"></p></th>
+                    <th><p id="outputR2"></p></th>
+            </tr>
+            
+            <tr>
+                    <th><p id="outputM3"></p></th>
+                    <th><p id="outputR3"></p></th>
+            </tr>
+            
+            <tr>
+                    <th><p id="outputM4"></p></th>
+                    <th><p id="outputR4"></p></th>
+            </tr>
+            
+            <tr>
+                    <th><p id="outputM5"></p></th>
+                    <th><p id="outputR5"></p></th>
+            </tr>
+        </table>
+
+        
+        <a id="downloadLink" onclick="exportF(this)">Export to excel</a>
+        
+        <script>
+
+        function exportF(elem) {
+            var table = document.getElementById("table");
+            var html = table.outerHTML;
+            var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
+            elem.setAttribute("href", url);
+            elem.setAttribute("download", "UserRate.xlsx"); // Choose the file name
+            return false;
+            }
+    
+         </script>
+
+        </div> 
+        </div>
+        
+    </body>
+</html>

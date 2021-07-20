@@ -1,0 +1,68 @@
+body {
+    margin:0px;
+    color:#000; 
+    font-size:12px;
+    letter-spacing:1px;
+    background-color: #272727;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    font-family:Helvetica,Arial,sans-serif;
+  }
+  
+  a {
+    color:#222;  
+    text-decoration:none;
+  }
+  #name {
+    background-color:rgb(235, 190, 190);
+      width:100%;
+      padding:10px;
+      margin-bottom: .5px ;
+      text-align: center;
+      font-weight: bold;
+  }
+ #header {
+    background-color:rgb(231, 202, 202);
+      width:100%;
+      padding:10px;
+      border-bottom:2px solid #8f4646;
+      text-align: center;
+  }
+  
+  #links {
+      display:inline-block;
+  }
+  
+  #links a {
+      /*display:inline-block;*/
+      margin-right:10px;
+  }
+  
+  #links a:hover {
+    color:#e0927f;
+  }
+
+    #box-1 {
+        margin:150px auto;
+        width:50%;
+        background-color:#fff;
+        border:3px solid rgb(238, 200, 200);
+        padding:20px;
+        padding-bottom:15px;
+    }
+    
+    h1 {
+        font-size:1em;
+    }
+
+    #form {
+        font-family:Helvetica,sans-serif;
+        font-weight:400;
+        font-size:12px;
+        text-align: center;
+    }
+
+    #form input {
+        border:5px;
+        border-bottom:1px solid rgb(238, 212, 212);
+        margin-bottom:5px;
+    }
